@@ -23,7 +23,7 @@ class App extends Component {
     // console.log('update');
     const { contacts } = this.state;
     // console.log(prevState.contacts);
-    if (prevState.contacts.length !== contacts.length) {
+    if (prevState.contacts !== contacts) {
       localStorage.setItem('my-contacts', JSON.stringify(contacts));
     }
   }
